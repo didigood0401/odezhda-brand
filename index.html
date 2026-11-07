@@ -22,7 +22,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 header{position:sticky;top:0;z-index:40;background:rgba(243,238,230,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .hd{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
 .logo{font-family:Prata;font-size:25px;letter-spacing:.18em}
-.logo small{font-family:"Golos Text";font-size:10px;letter-spacing:.2em;display:block;color:var(--mut);margin-top:-4px}
+.logo small{font-family:"Golos Text";font-size:11px;letter-spacing:.2em;display:block;color:var(--mut);margin-top:-4px}
 nav{display:flex;gap:28px;font-size:14px}
 nav a{position:relative}
 nav a:after{content:"";position:absolute;left:0;bottom:-4px;height:1px;width:0;background:var(--ink);transition:width .3s}
@@ -56,7 +56,7 @@ nav a:hover:after{width:100%}
 .tagcard span{font-size:13px;color:var(--mut)}
 .vlabel{position:absolute;right:22px;top:50%;transform:rotate(90deg) translateX(50%);transform-origin:right;font-size:11px;letter-spacing:.3em;color:#fff;text-transform:uppercase}
 /* marquee */
-.mq{background:var(--ink);color:var(--bg);overflow:hidden;white-space:nowrap;padding:14px 0;font-size:14px;letter-spacing:.06em}
+.mq{background:var(--ink);color:var(--bg);overflow:hidden;white-space:nowrap;padding:14px 0;font-size:14px;letter-spacing:.03em}
 .mq div{display:inline-block;animation:mq 32s linear infinite}
 .mq span{margin:0 26px}.mq span:nth-child(even){color:#c9a58f}
 @keyframes mq{to{transform:translateX(-50%)}}
@@ -76,7 +76,7 @@ section{padding:96px 0}
 .ph{position:relative;aspect-ratio:3/4.1;overflow:hidden;border-radius:4px;background:var(--acc2)}
 .ph img{transition:transform 1s cubic-bezier(.2,.7,.2,1)}
 .card:hover .ph img{transform:scale(1.05)}
-.badge{position:absolute;left:12px;top:12px;background:var(--paper);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:5px 10px;border-radius:20px}
+.badge{position:absolute;left:12px;top:12px;background:var(--paper);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:20px}
 .wish{position:absolute;right:12px;top:12px;width:36px;height:36px;border-radius:50%;background:var(--paper);display:flex;align-items:center;justify-content:center}
 .wish.on svg{fill:var(--acc);stroke:var(--acc)}
 .quick{position:absolute;left:12px;right:12px;bottom:12px;background:rgba(251,248,243,.96);border-radius:10px;padding:12px;transform:translateY(calc(100% + 14px));transition:transform .4s cubic-bezier(.2,.7,.2,1)}
