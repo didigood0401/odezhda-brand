@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>ОТТЕНОК: премиум-концепт</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Golos+Text:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--wine:#3b0d1c;--deep:#260711;--blush:#f7dcd2;--rose:#e88f7d;--gold:#e7c078;--ink:#1e0a11}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:17px/1.55 "Golos Text",Arial,sans-serif;background:var(--wine);color:var(--blush);overflow-x:hidden}
+h1,h2,h3{font-family:Forum,Georgia,serif;font-weight:400;line-height:1}
+.wrap{max-width:1320px;margin:0 auto;padding:0 20px}
+.note{font-size:13px;text-align:center;padding:8px 16px;background:var(--deep)}
+.cov{position:relative;min-height:calc(100vh - 38px);display:grid;grid-template-columns:1fr minmax(0,.62fr);align-items:stretch}
+.ttl{display:flex;flex-direction:column;justify-content:space-between;padding:26px 20px 34px clamp(20px,4vw,56px);position:relative;z-index:2}
+.brand{letter-spacing:.34em;font:400 18px Forum,serif}
+.col{list-style:none;padding:0}
+.col a{display:flex;align-items:baseline;gap:16px;color:var(--blush);text-decoration:none;font:400 clamp(48px,8.6vw,132px)/1.02 Forum,serif;transition:color .25s,transform .35s cubic-bezier(.22,1,.36,1)}
+.col a small{font:400 15px "Golos Text",Arial;color:var(--gold)}
+.col a:hover,.col a.on{color:var(--gold);transform:translateX(18px)}
+.tag{max-width:360px;margin-top:20px}
+.pic{position:relative;overflow:hidden;background:var(--deep)}
+.pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .55s,transform 1.1s cubic-bezier(.22,1,.36,1)}
+.pic img.on{opacity:1;transform:none}
+section{padding:96px 0}
+.light{background:var(--blush);color:var(--ink)}
+h2{font-size:clamp(44px,7vw,92px);margin-bottom:12px}
+.lede{max-width:600px;margin-bottom:36px}
+.cap{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:40px;align-items:start}
+.items{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.it{position:relative;border:0;padding:0;background:none;cursor:pointer;text-align:left;font:inherit;color:inherit}
+.it span.im{display:block;aspect-ratio:3/4;overflow:hidden;border-radius:4px;outline:0 solid var(--wine);transition:outline-width .15s}
+.it img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.it:hover img{transform:scale(1.04)}
+.it[aria-pressed=true] span.im{outline-width:4px;outline-offset:-4px}
+.it b{display:block;font-weight:500;margin-top:8px}
+.chk{position:absolute;top:10px;right:10px;width:32px;height:32px;border-radius:50%;background:var(--wine);color:#fff;display:none;align-items:center;justify-content:center}
+.it[aria-pressed=true] .chk{display:flex}
+.bag{position:sticky;top:20px;background:var(--wine);color:var(--blush);padding:30px;border-radius:6px}
+.bag h3{font-size:36px;margin-bottom:12px}
+.track{height:8px;background:#ffffff26;border-radius:8px;overflow:hidden;margin:14px 0}
+.track i{display:block;height:100%;width:0;background:var(--gold);transition:width .45s cubic-bezier(.22,1,.36,1)}
+.tot{font:400 46px/1 Forum,serif;margin:10px 0 4px}
+.old{text-decoration:line-through;opacity:.65;font-size:16px;min-height:26px}
+.btn{display:block;width:100%;text-align:center;background:var(--gold);color:var(--ink);font:700 16px "Golos Text",Arial;padding:16px;border:0;border-radius:4px;cursor:pointer;margin-top:14px;transition:background .2s}
+.btn:hover{background:#f2d398}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.lv{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#ffffff33}
+.lv div{background:var(--wine);padding:30px 24px}
+.lv h3{font-size:42px;color:var(--gold);margin-bottom:6px}
+.join{display:flex;gap:10px;margin-top:26px;flex-wrap:wrap}
+.join input{flex:1;min-width:220px;font:inherit;padding:15px;border:1px solid #ffffff55;border-radius:4px;background:none;color:#fff}
+.join .btn{width:auto;margin:0;padding:15px 28px}
+.ok{display:none;color:var(--gold);margin-top:10px}
+footer{padding:26px 0;font-size:14px;opacity:.75}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+@media(max-width:860px){.cov{grid-template-columns:1fr;min-height:0}.pic{height:58vh;order:-1}.col a{font-size:clamp(44px,14vw,76px)}.ttl{gap:22px}.cap{grid-template-columns:1fr}.items{grid-template-columns:repeat(2,1fr)}.bag{position:static}.lv{grid-template-columns:1fr}section{padding:60px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="note">Демо-концепт: название, фото и цены условные. Покажем идею на Ваших коллекциях.</div>
+<div class="cov">
+<div class="ttl">
+<div class="brand">ОТТЕНОК</div>
+<ul class="col" id="col"></ul>
+<p class="tag">Наведите на коллекцию. Каждая открывается своим настроением, как разворот журнала.</p>
+</div>
+<div class="pic" id="pic" aria-hidden="true"></div>
+</div>
+<section class="light"><div class="wrap">
+<h2>Капсула за минуту</h2>
+<p class="lede">Выберите вещи, и скидка растёт на глазах: 3 вещи -10%, 4 вещи -15%. Покупательница берёт образ, а не одну позицию.</p>
+<div class="cap">
+<div class="items" id="items"></div>
+<aside class="bag">
+<h3>Ваша капсула</h3>
+<div id="cnt"></div>
+<div class="track"><i id="bar"></i></div>
+<div id="hint" style="font-size:15px"></div>
+<div class="tot" id="tot">0 ₽</div>
+<div class="old" id="old"></div>
+<div id="pts" style="color:var(--gold);font-size:15px"></div>
+<button class="btn" id="buy" type="button" disabled>Оформить капсулу</button>
+<div class="ok" id="bok" role="status">Демо: капсула добавлена в корзину</div>
+</aside>
+</div>
+</div></section>
+<section><div class="wrap">
+<h2>Клуб ОТТЕНОК</h2>
+<p class="lede">Программа лояльности, ради которой приходят на сайт, а не на маркетплейс.</p>
+<div class="lv">
+<div><h3>Близкая</h3>3% бонусами и подарок ко дню рождения</div>
+<div><h3>Своя</h3>от 30 000 ₽: 5% и ранний доступ к коллекциям</div>
+<div><h3>Муза</h3>от 80 000 ₽: 10%, личный стилист, примерка дома</div>
+</div>
+<form class="join" id="jf"><input type="tel" required placeholder="Телефон для вступления" aria-label="Телефон"><button class="btn">Вступить в клуб</button></form>
+<div class="ok" id="jok" role="status">Демо: вы в клубе, начислено 500 бонусов</div>
+</div></section>
+<div class="wrap"><footer>Демо-концепт. Фото: StockSnap, CC0.</footer></div>
+<script>
+var C=[['Вечер','look.jpg','18'],['Город','p2.jpg','24'],['Лето','hero.jpg','16'],['База','p5.jpg','31']];
+var I=[['Трикотаж красный','p1.jpg',7400],['Платье-тренч','p2.jpg',12900],['Топ и юбка','p3.jpg',9800],['Платье молочное','p4.jpg',11200],['Жакет белый','p5.jpg',10500],['Платье изумруд','p6.jpg',18900]];
+var col=document.getElementById('col'),pic=document.getElementById('pic');
+C.forEach(function(c,i){pic.insertAdjacentHTML('beforeend','<img src="../img/'+c[1]+'" alt="">');var li=document.createElement('li');li.innerHTML='<a href="#" data-i="'+i+'">'+c[0]+'<small>'+c[2]+' моделей</small></a>';col.appendChild(li);var a=li.firstChild;a.onmouseenter=a.onfocus=function(){show(i)};a.onclick=function(e){e.preventDefault();show(i)}});
+function show(i){[].forEach.call(pic.children,function(m,n){m.classList.toggle('on',n===i)});[].forEach.call(col.querySelectorAll('a'),function(a,n){a.classList.toggle('on',n===i)})}show(0);
+var box=document.getElementById('items'),sel=[];
+I.forEach(function(it,i){var b=document.createElement('button');b.type='button';b.className='it';b.setAttribute('aria-pressed','false');b.innerHTML='<span class="im"><img loading="lazy" src="../img/'+it[1]+'" alt="'+it[0]+'"></span><span class="chk">✓</span><b>'+it[0]+'</b>'+f(it[2])+' ₽';b.onclick=function(){var k=sel.indexOf(i);if(k>=0)sel.splice(k,1);else sel.push(i);b.setAttribute('aria-pressed',k<0);r()};box.appendChild(b)});
+function f(n){return n.toString().replace(/\B(?=(\d{3})+$)/g,' ')}
+function r(){var n=sel.length,s=sel.reduce(function(a,i){return a+I[i][2]},0),d=n>=4?.15:n>=3?.1:0,t=Math.round(s*(1-d));cnt.textContent=n?n+' из 4 вещей':'Пока пусто';bar.style.width=Math.min(100,n*25)+'%';hint.textContent=n>=4?'Максимальная скидка 15%':n===3?'Ещё одна вещь, и скидка станет 15%':'Добавьте '+(3-n)+' и получите 10%';tot.textContent=f(t)+' ₽';old.textContent=d?f(s)+' ₽':'';pts.textContent=n?'+ '+f(Math.round(t*.03))+' бонусов клуба':'';buy.disabled=!n;bok.style.display='none'}r();
+buy.onclick=function(){bok.style.display='block'};
+jf.onsubmit=function(e){e.preventDefault();jok.style.display='block'};
+</script>
+</body>
+</html>
